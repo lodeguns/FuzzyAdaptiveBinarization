@@ -30,7 +30,6 @@ Here a whole overview of the FLAT algorithm. More details in the paper.
 
 Here, for the impatient, is an implementation of the FLAT methods in [Python](https://cran.r-project.org/)
 
-**Fuzzy summed-area table algorithm**
 
 **Classic summed-area table algorithm (SAT)**
 
