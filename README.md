@@ -18,7 +18,8 @@ This document presents a new adaptive binarization technique based on fuzzy inte
  Source for the FLAT methos are in this repository.
  The E.coli [whole metabolic network](/ecocyc.kegg.igraph.Rdata) is integrated from [KEGG](http://www.genome.jp/kegg/) and [EcoCyc](https://ecocyc.org/).
  
-### theta-dataset and gamma-dataset
+### The theta-dataset and gamma-dataset with GT
+The respective datasets are in the named subfolders. Please, refeer to the paper for more details and citations.
 
 
 ### FLAT algortihm (Fuzzy Local Adaptive Thresholding)
