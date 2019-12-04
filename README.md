@@ -87,7 +87,9 @@ def compute_summed_area_table_F1F2(image ):
                 S_c[row][col] = S[row][col]  
     return  S, S_c
 ``` 
-**F(A4) Integral image: Choquet Integral Image **
+
+**F(A4) Integral image: Choquet Integral Image**
+
 ```Python
 def compute_summed_area_table_CHO(image ):
     # image is a 2-dimensional array containing ints or floats, with at least 1 element.
