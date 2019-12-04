@@ -27,7 +27,7 @@ This document presents a new adaptive binarization technique based on fuzzy inte
 ### FLAT algortihm (Fuzzy Local Adaptive Thresholding)
 
 
-![alt text](https://media.springernature.com/full/springer-static/image/art%3A10.1186%2Fs12859-018-2175-5/MediaObjects/12859_2018_2175_Fig5_HTML.png)
+![alt text](/image1git.png)
 
 
 
@@ -50,7 +50,8 @@ Here, for the impatient, is an implementation of the FLAT methods in [Python](ht
 
 **Fuzzy adaptive thresholding with Generalized Sugeno (A1)**
 
-
+** Google colab optimized implementations **
+In the following links the optimized implementations of the FLAT algorithms and the associated benchmarks with Google Colab . 
 
 
 
