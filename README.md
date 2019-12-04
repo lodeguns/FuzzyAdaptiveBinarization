@@ -51,7 +51,8 @@ def compute_summed_area_table(image):
             else:
                 new_image[row][col] = image[row][col]
     return new_image
-
+```Python
+```Python
 def compute_summed_area_table_F1F2(image ):
     # image is a 2-dimensional array containing ints or floats, with at least 1 element.
     height = len(image)
@@ -79,7 +80,8 @@ def compute_summed_area_table_F1F2(image ):
                 S[row][col] = image[row][col]
                 S_c[row][col] = S[row][col]  
     return  S, S_c
-
+```Python
+```Python
 def compute_summed_area_table_CHO(image ):
     # image is a 2-dimensional array containing ints or floats, with at least 1 element.
     height = len(image)
@@ -108,7 +110,8 @@ def compute_summed_area_table_CHO(image ):
                 S[row][col] = image[row][col]
                 S_c[row][col] = S[row][col]  
     return  S, S_c
-
+```Python
+```Python
 def compute_summed_area_table_HAM(image ):
     # image is a 2-dimensional array containing ints or floats, with at least 1 element.
     height = len(image)
