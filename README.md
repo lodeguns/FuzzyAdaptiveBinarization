@@ -194,6 +194,8 @@ def adaptive_thresh_fuzzy_int(input_img, int_img, a1=4, a2=1, T=0, log=False):
 **Google colab optimized implementations**
 In the following links the optimized implementations of the FLAT algorithms and the associated benchmarks with Google Colab . 
 
+## Source code 
+The extened tests and implementations are provided in a single python scritpt, [fuzzy_adaptive_bin.py](here)
 
 ### The theta-dataset and gamma-dataset with GT
 The respective datasets are: [theta-dataset](theta-dataset) and [gamma-dataset](gamma-dataset).
