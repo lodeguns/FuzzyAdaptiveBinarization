@@ -154,11 +154,44 @@ def compute_summed_area_table_HAM(image ):
 
 
 
-**Fuzzy adaptive thresholding with Generalized Sugeno (A3)**
+**Fuzzy adaptive thresholding of Images in [0,1] with with one of the above Fuzzy integral images**
 
-**Fuzzy adaptive thresholding with Generalized Sugeno (A4)**
+```Python
+def adaptive_thresh_fuzzy_int(input_img, int_img, a1=4, a2=1, T=0, log=False):    
+    out_img = np.zeros_like(input_img) 
+    mat     = out_img
+    h, w = input_img.shape
+    S = w/a1
+    s2 = S/a2
 
-**Fuzzy adaptive thresholding with Generalized Sugeno (A1)**
+
+    for col in range(w):
+        for row in range(h):
+            y0 = int(max(row-s2, 0))
+            y1 = int(min(row+s2, h-1))
+            x0 = int(max(col-s2, 0))
+            x1 = int(min(col+s2, w-1))
+            count = (y1-y0)*(x1-x0)   
+            sum_ = -1
+            if count == 0:
+                if x0 == x1 and y0 == y1:
+                    sum_ = int_img[y0, x0]
+                if x1 == x0 and y0 != y1:
+                    sum_ = int_img[y1, x1] - int_img[y0, x1]
+                if y1 == y0 and x1 != x0:
+                    sum_ = int_img[y1, x1] - int_img[y1, x0]
+            else:
+                sum_ = int_img[y1, x1] - int_img[y0, x1] - int_img[y1, x0] + int_img[y0, x0]           
+            
+            mat[row,col] = sum_/count
+
+            if input_img[row, col]*count  < sum_ * (1.-T).:
+                out_img[row,col] = 0
+            else:
+                out_img[row,col] = 1
+
+    return out_img, mat, T
+```
 
 ** Google colab optimized implementations **
 In the following links the optimized implementations of the FLAT algorithms and the associated benchmarks with Google Colab . 
