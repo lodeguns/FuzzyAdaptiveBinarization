@@ -207,7 +207,9 @@ The gamma-dataset is our challenging dataset, while the theta-dataset is provide
 
 
 **Licence**
-BMC Bioinformatics, This work is supported by NeuRoNe Lab (University of Salerno - IT) and the Artificial Intelligence departement of the University of Navarra - UPNA (SP).
+The same of IEEE transactions for Journal Papers.
+
+This work is supported by the Artificial Intelligence departement of the University of Navarra - UPNA (SP) and by the DISA-MIS department, NeuRoNe Lab (University of Salerno - IT).
 
 
 
