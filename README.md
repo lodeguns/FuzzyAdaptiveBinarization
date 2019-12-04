@@ -1,6 +1,6 @@
 ## Adaptive binarization based on fuzzy integrals
 
-This repository contains the manuscript mentioned in the title, and associated code and data sets. Should you need help running our code, please contact us.
+This repository contains the manuscript mentioned in the title, and associated code and data sets used for testing our novel methodology. Should you need help running our code, please contact us.
 
 https://link
 
@@ -16,10 +16,12 @@ This document presents a new adaptive binarization technique based on fuzzy inte
                                 
  **Conclusions:** 
  The experimental results show that the proposed methodology have produced an image quality thresholding often better than other traditional or simple neural network models. Furthermore, this new methodology is also competitive in terms of performance over time. Therefore, these new generalized fuzzy integrals (based on generalized form of Sugeno, Choquet and Hamacher t-Norm) can be used as a tool for grayscale processing in real-time and deep-learning applications.			
+ 
  **Source Code**
  Source for the FLAT methos are in this repository.
  The E.coli [whole metabolic network](/ecocyc.kegg.igraph.Rdata) is integrated from [KEGG](http://www.genome.jp/kegg/) and [EcoCyc](https://ecocyc.org/).
-
+ 
+### theta-dataset and gamma-dataset
 
 
 ### FLAT algortihm (Fuzzy Local Adaptive Thresholding)
