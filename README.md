@@ -31,7 +31,7 @@ Here a whole overview of the FLAT algorithm. More details in the paper.
 Here, for the impatient, is an implementation of the FLAT methods in [Python](https://cran.r-project.org/)
 
 
-**Classic summed-area table algorithm (SAT)**
+**S integral image : Classic summed-area table algorithm (SAT)**
 
 ```Python
 
@@ -55,7 +55,7 @@ def compute_summed_area_table(image):
     return new_image
 ``` 
 
-**CF12 - Generalized Sugeno (A2)**
+**F(A2) Integral image: CF12 - Generalized Sugeno**
 ```Python
 def compute_summed_area_table_F1F2(image ):
     # image is a 2-dimensional array containing ints or floats, with at least 1 element.
@@ -85,7 +85,7 @@ def compute_summed_area_table_F1F2(image ):
                 S_c[row][col] = S[row][col]  
     return  S, S_c
 ``` 
-**Choquet Integral Image (A4)**
+**F(A4) Integral image: Choquet Integral Image **
 ```Python
 def compute_summed_area_table_CHO(image ):
     # image is a 2-dimensional array containing ints or floats, with at least 1 element.
@@ -117,7 +117,7 @@ def compute_summed_area_table_CHO(image ):
     return  S, S_c
 ``` 
 
-**Hamacher t-norm Integral Image (A3)**
+**F(A3) Integral image: Hamacher t-norm Integral Image**
 ```Python
 def compute_summed_area_table_HAM(image ):
     # image is a 2-dimensional array containing ints or floats, with at least 1 element.
