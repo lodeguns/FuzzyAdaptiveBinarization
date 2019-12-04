@@ -196,7 +196,9 @@ In the following links the optimized implementations of the FLAT algorithms and 
 
 
 ### The theta-dataset and gamma-dataset with GT
-The respective datasets are in the named subfolders. Please, refeer to the paper for more details and citations.
+The respective datasets are: [theta-dataset](theta-dataset) and [gamma-dataset](gamma-dataset).
+The gamma-dataset is our challenging dataset, while the theta-dataset is provided by an external source, please refeer to the citations in the paper. 
+
 
 
 **Licence**
