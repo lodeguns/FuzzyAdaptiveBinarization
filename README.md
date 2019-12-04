@@ -20,7 +20,7 @@ This document presents a new adaptive binarization technique based on fuzzy inte
 
 
 
-Here a simple visual test on the [theta-dataset](/theta-dataset) for our 3 methods **A2,A3,A4** with respect 4 traditional binarization methods:
+Here a simple visual test on the [theta-dataset](/theta-dataset) for our 3 methods **A2,A3,A4** with respect 4 traditional binarization methods (note Global Th is the Otsu method):
 ![alt text](/res0.png)
 
 ### FLAT algortihm (Fuzzy Local Adaptive Thresholding)
