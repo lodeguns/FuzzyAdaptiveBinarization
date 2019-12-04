@@ -25,8 +25,7 @@ This document presents a new adaptive binarization technique based on fuzzy inte
 
 
 ### FLAT algortihm (Fuzzy Local Adaptive Thresholding)
-Here a whole overview of the FLAT algorithm.  In Boxes a-b, the steps of FLAT for the computation of both the integral image S and the fuzzy integral image $F_{A_i}$ are shown.  The blue square in Box a represents the current value of p(x,y) in I, (in red) and its neighboring pixels defined in the $j$-th operative window. For each pixel $p(x,y)$ and for every  \emph{j}-th operative window (yellow box), the 4 values in $S$ are mapped with the associated fuzzy measures through $F_{A_i}(x,y)=f_i(\vec{ov}, \vec{m})$ for $i=1,2,3,4$. The output of the fuzzy-based integral functional computation is saved in the fuzzy integral image $F_{A_i}$. This computation is described in the formula \ref{fuz}. In the \emph{j}-th operative window, the fixed values of min $v_1$ and max $v_4$ are represented in violet and blue. For the decision of $v_2$ and $v_3$, the green arrow indicates the $P_{swap}$ action as described in the Procedure \ref{eq6}. In Figure \ref{fig_000} Box \textbf{(c)}, the \emph{k}-th local search window $w_n$ used for the locally adaptive thresholding is shown. It is important to underline that, as it is described in the Algorithm \ref{alg:algo2}, only the 4 values in the orange rectangles are used for the binarization. These 4 values are not necessarily adjacent like in the operative window. The dashed red arrows show the local window sliding directions, from up to down, from left to right. The local window has a fixed size of $n_a * n_a$. The $I_b$ indicates the binarized image given in output considering the $b$-type fuzzy integral image.
-
+Here a whole overview of the FLAT algorithm. More details in the paper. 
 ![alt text](/image1git.png)
 
 
