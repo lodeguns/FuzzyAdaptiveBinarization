@@ -31,6 +31,9 @@ Here a whole overview of the FLAT algorithm. More details in the paper.
 Here, for the impatient, is an implementation of the FLAT methods in [Python](https://cran.r-project.org/)
 
 **Fuzzy summed-area table algorithm**
+
+**Classic summed-area table algorithm (SAT)**
+
 ```Python
 
 def compute_summed_area_table(image):
@@ -51,7 +54,9 @@ def compute_summed_area_table(image):
             else:
                 new_image[row][col] = image[row][col]
     return new_image
-```Python
+``` 
+
+**CF12 - Generalized Sugeno (A2)**
 ```Python
 def compute_summed_area_table_F1F2(image ):
     # image is a 2-dimensional array containing ints or floats, with at least 1 element.
@@ -80,7 +85,8 @@ def compute_summed_area_table_F1F2(image ):
                 S[row][col] = image[row][col]
                 S_c[row][col] = S[row][col]  
     return  S, S_c
-```Python
+``` 
+**Choquet Integral Image (A4)**
 ```Python
 def compute_summed_area_table_CHO(image ):
     # image is a 2-dimensional array containing ints or floats, with at least 1 element.
@@ -110,7 +116,9 @@ def compute_summed_area_table_CHO(image ):
                 S[row][col] = image[row][col]
                 S_c[row][col] = S[row][col]  
     return  S, S_c
-```Python
+``` 
+
+**Hamacher t-norm Integral Image (A3)**
 ```Python
 def compute_summed_area_table_HAM(image ):
     # image is a 2-dimensional array containing ints or floats, with at least 1 element.
@@ -145,7 +153,6 @@ def compute_summed_area_table_HAM(image ):
 
 
 
-**Fuzzy adaptive thresholding with Generalized Sugeno (A2)**
 
 **Fuzzy adaptive thresholding with Generalized Sugeno (A3)**
 
