@@ -33,7 +33,111 @@ Here, for the impatient, is an implementation of the FLAT methods in [Python](ht
 **Fuzzy summed-area table algorithm**
 ```Python
 
-}
+def compute_summed_area_table(image):
+    # image is a 2-dimensional array containing ints or floats, with at least 1 element.
+    height = len(image)
+    width = len(image[0])
+    new_image = [[0.0] * width for _ in range(height)] # Create an empty summed area table
+    for row in range(0, height):
+        for col in range(0, width):
+            if (row > 0) and (col > 0):
+                new_image[row][col] = image[row][col] + \
+                    new_image[row][col - 1] + new_image[row - 1][col] - \
+                    new_image[row - 1][col - 1]
+            elif row > 0:
+                new_image[row][col] = image[row][col] + new_image[row - 1][col]
+            elif col > 0:
+                new_image[row][col] = image[row][col] + new_image[row][col - 1]
+            else:
+                new_image[row][col] = image[row][col]
+    return new_image
+
+def compute_summed_area_table_F1F2(image ):
+    # image is a 2-dimensional array containing ints or floats, with at least 1 element.
+    height = len(image)
+    width = len(image[0])
+    S   = [[0.0] * width for _ in range(height)] # Create an empty summed area table
+    S_c = S# Create an empty summed area table
+    for row in range(0, height):
+        for col in range(0, width):
+            if (row > 0) and (col > 0):
+                S[row][col] = image[row][col] + S[row][col - 1] +  S[row - 1][col] -  S[row - 1][col - 1]
+                if(S[row][col - 1] > S[row - 1][col] ):
+                    ov = np.asarray([0, S[row-1][col-1], S[row-1][col], S[row][col-1], S[row][col]])
+                else:
+                    ov = np.asarray([0, S[row-1][col-1], S[row][col-1], S[row-1][col], S[row][col]])
+                S_c[row][col] = ov[1]  + ov[2]*0.75 + ov[3]*0.5 + ov[4]*0.25
+            elif row > 0:
+                S[row][col] = image[row][col] +  S[row - 1][col]
+                ov = np.asarray([0, S[row - 1][col], S[row][col]])
+                S_c[row][col] = ov[1]  + ov[2]*0.50
+            elif col > 0:
+                S[row][col] = image[row][col] +  S[row][col - 1]
+                ov = np.asarray([0, S[row - 1][col], S[row][col]])
+                S_c[row][col] = ov[1]  + ov[2]*0.50
+            else:
+                S[row][col] = image[row][col]
+                S_c[row][col] = S[row][col]  
+    return  S, S_c
+
+def compute_summed_area_table_CHO(image ):
+    # image is a 2-dimensional array containing ints or floats, with at least 1 element.
+    height = len(image)
+    width = len(image[0])
+    S   = [[0.0] * width for _ in range(height)] # Create an empty summed area table
+    S_c = S# Create an empty summed area table
+    for row in range(0, height):
+        for col in range(0, width):
+            if (row > 0) and (col > 0):
+                S[row][col] = image[row][col] + S[row][col - 1] +  S[row - 1][col] -  S[row - 1][col - 1]
+                if(S[row][col - 1] > S[row - 1][col] ):
+                    ov = np.asarray([0, S[row-1][col-1], S[row-1][col], S[row][col-1], S[row][col]])
+                else:
+                    ov = np.asarray([0, S[row-1][col-1], S[row][col-1], S[row-1][col], S[row][col]])
+                S_c[row][col] = (ov[1]-ov[0]) +(ov[2]-ov[1])*0.75 + (ov[3]-ov[2])*0.50 +(ov[4]-ov[3])*0.25
+            elif row > 0:
+                S[row][col] = image[row][col] +  S[row - 1][col]
+                ov = np.asarray([0, S[row - 1][col], S[row][col]])
+                S_c[row][col] =  (ov[1]-ov[0]) +(ov[2]-ov[1])*0.5
+            elif col > 0:
+                S[row][col] = image[row][col] +  S[row][col - 1]
+                ov = np.asarray([0, S[row - 1][col], S[row][col]])
+                mu_q = np.asarray([1, 0.5])
+                S_c[row][col] =  (ov[1]-ov[0]) +(ov[2]-ov[1])*0.6
+            else:
+                S[row][col] = image[row][col]
+                S_c[row][col] = S[row][col]  
+    return  S, S_c
+
+def compute_summed_area_table_HAM(image ):
+    # image is a 2-dimensional array containing ints or floats, with at least 1 element.
+    height = len(image)
+    width = len(image[0])
+    S   = [[0.0] * width for _ in range(height)] # Create an empty summed area table
+    S_c = S# Create an empty summed area table
+    for row in range(0, height):
+        for col in range(0, width):
+            if (row > 0) and (col > 0):
+                S[row][col] = image[row][col] + S[row][col - 1] +  S[row - 1][col] -  S[row - 1][col - 1]
+                if(S[row][col - 1] > S[row - 1][col] ):
+                    ov = np.asarray([0, S[row-1][col-1], S[row-1][col], S[row][col-1], S[row][col]])
+                else:
+                    ov = np.asarray([0, S[row-1][col-1], S[row][col-1], S[row-1][col], S[row][col]])
+                S_c[row][col] = (ov[1]-ov[0])/(ov[1] + 1 - (ov[1]))+(ov[2]-ov[1])/(ov[2] + 0.75 - (ov[2]*0.75)) + (ov[3]-ov[2])//(ov[3] + 0.50 - (ov[0]*0.50)) +(ov[4]-ov[3])/(ov[4] + 0.25 - (ov[4]*0.25))
+            elif row > 0:
+                S[row][col] = image[row][col] +  S[row - 1][col]
+                ov = np.asarray([0, S[row - 1][col], S[row][col]])
+                S_c[row][col] =  (ov[1]-ov[0])/(ov[1] + 1 - (ov[1]))+(ov[2]-ov[1])/(ov[2] + 0.5 - (ov[2]*0.5))
+            elif col > 0:
+                S[row][col] = image[row][col] +  S[row][col - 1]
+                ov = np.asarray([0, S[row - 1][col], S[row][col]])
+                S_c[row][col] =  (ov[1]-ov[0])/(ov[1] + 1 - (ov[1]))+(ov[2]-ov[1])/(ov[2] + 0.5 - (ov[2]*0.5))
+            else:
+                S[row][col] = image[row][col]
+                S_c[row][col] = S[row][col]  
+    return  S, S_c
+
+
 ```
 
 
