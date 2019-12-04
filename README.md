@@ -193,7 +193,7 @@ def adaptive_thresh_fuzzy_int(input_img, int_img, a1=4, a2=1, T=0, log=False):
     return out_img, mat, T
 ```
 
-** Google colab optimized implementations **
+**Google colab optimized implementations**
 In the following links the optimized implementations of the FLAT algorithms and the associated benchmarks with Google Colab . 
 
 
