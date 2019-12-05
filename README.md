@@ -26,7 +26,7 @@ Instead here, the CNN binary predictions of the images above for 2 CNNs: [Le-Net
 
 ![letnetrednet](/lenetrednet.png)
 
-
+The CNNs for binarization are linked in this repository. Le-Net5 implementation is provided [here](/CNN-Binarization), while the [RED-Net](https://github.com/ajgallego/document-image-binarization) is linked to the authors GitHub. For what is concerning RED-Net(U-net), in this paperwork, their pre-trained model is used for comparisons.
 
  
  
