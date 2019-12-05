@@ -1,5 +1,4 @@
 ## Adaptive binarization based on fuzzy integrals
-
 This repository contains the manuscript mentioned in the title, and associated code and data sets used for testing our novel methodology. Should you need help running our code, please contact us.
 
 https://link
@@ -14,26 +13,9 @@ Adaptive binarization methodologies thredhold the intensity of the pixels with r
 **Results and Conclusions:**   
 This document presents a new adaptive binarization technique based on fuzzy integral images through an efficient design of a modified SAT for fuzzy integrals. We define this new methodology as FLAT (Fuzzy Local Adaptive Thresholding). The experimental results show that the proposed methodology have produced an image quality thresholding often better than other traditional or simple neural network models. We propose a new generalization of the Sugeno and CF12 integrals to improve the existing results and how they can be efficiently computed in the Integral Image. Therefore, these new generalized fuzzy integrals can be used as a tool for grayscale processing in real-time and deep-learning applications.			
  
- **Source Code**
- Source for the FLAT methos are in this repository.
- The E.coli [whole metabolic network](/ecocyc.kegg.igraph.Rdata) is integrated from [KEGG](http://www.genome.jp/kegg/) and [EcoCyc](https://ecocyc.org/).
-
-
-**Visual Examples**
-Here a simple visual test on the [theta-dataset](/theta-dataset) for our 3 methods **A2,A3,A4** with respect 4 traditional binarization methods (note Global Th is the Otsu method):
-![alt text](/res0.png)
-
-Instead here, the CNN binary predictions of the images above for 2 CNNs: [Le-Net5](/CNN-Binarization) and [RED-Net](https://github.com/ajgallego/document-image-binarization).
-
-![letnetrednet](/lenetrednet.png)
-
-
 ### FLAT algortihm (Fuzzy Local Adaptive Thresholding)
 Here a whole overview of the FLAT algorithm. More details in the paper. 
 ![alt text](/image1git.png)
-
-
-
 
 Here, for the impatient, is an implementation of the FLAT methods in [a Python script](/fuzzy_adaptive_bin.py).
 
@@ -200,6 +182,19 @@ def adaptive_thresh_fuzzy_int(input_img, int_img, a1=4, a2=1, T=0, log=False):
 
     return out_img, mat, T
 ```
+
+
+
+
+**Visual Examples**
+Here a simple visual test on the [theta-dataset](/theta-dataset) for our 3 methods **A2,A3,A4** with respect 4 traditional binarization methods (note Global Th is the Otsu method):
+![alt text](/res0.png)
+
+Instead here, the CNN binary predictions of the images above for 2 CNNs: [Le-Net5](/CNN-Binarization) and [RED-Net](https://github.com/ajgallego/document-image-binarization).
+
+![letnetrednet](/lenetrednet.png)
+
+
 
 
 **Source code**: 
