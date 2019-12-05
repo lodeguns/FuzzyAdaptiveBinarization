@@ -19,9 +19,14 @@ This document presents a new adaptive binarization technique based on fuzzy inte
  The E.coli [whole metabolic network](/ecocyc.kegg.igraph.Rdata) is integrated from [KEGG](http://www.genome.jp/kegg/) and [EcoCyc](https://ecocyc.org/).
 
 
-
+**Visual Examples**
 Here a simple visual test on the [theta-dataset](/theta-dataset) for our 3 methods **A2,A3,A4** with respect 4 traditional binarization methods (note Global Th is the Otsu method):
 ![alt text](/res0.png)
+
+Instead here, the CNN predictions of the images above for 2 CNNs: Le-Net5 and [RED-Net](https://github.com/ajgallego/document-image-binarization).
+
+![letnetrednet](/lenetrednet.png)
+
 
 ### FLAT algortihm (Fuzzy Local Adaptive Thresholding)
 Here a whole overview of the FLAT algorithm. More details in the paper. 
