@@ -13,6 +13,24 @@ Adaptive binarization methodologies thredhold the intensity of the pixels with r
 **Results and Conclusions:**   
 This document presents a new adaptive binarization technique based on fuzzy integral images through an efficient design of a modified SAT for fuzzy integrals. We define this new methodology as FLAT (Fuzzy Local Adaptive Thresholding). The experimental results show that the proposed methodology have produced an image quality thresholding often better than other traditional or simple neural network models. We propose a new generalization of the Sugeno and CF12 integrals to improve the existing results and how they can be efficiently computed in the Integral Image. Therefore, these new generalized fuzzy integrals can be used as a tool for grayscale processing in real-time and deep-learning applications.			
  
+ 
+ 
+
+**Visual Examples**
+
+Here a simple visual test on the [theta-dataset](/theta-dataset) for our 3 methods **A2,A3,A4** with respect 4 traditional binarization methods (note Global Th is the Otsu method):
+![alt text](/res0.png)
+
+Instead here, the CNN binary predictions of the images above for 2 CNNs: [Le-Net5](/CNN-Binarization) and [RED-Net](https://github.com/ajgallego/document-image-binarization).
+
+![letnetrednet](/lenetrednet.png)
+
+
+
+ 
+ 
+ 
+ 
 ### FLAT algortihm (Fuzzy Local Adaptive Thresholding)
 Here a whole overview of the FLAT algorithm. More details in the paper. 
 ![alt text](/image1git.png)
@@ -25,10 +43,9 @@ Here, for the impatient, is an implementation of the FLAT methods in [a Python s
 ```Python
 
 def compute_summed_area_table(image):
-    # image is a 2-dimensional array containing ints or floats, with at least 1 element.
     height = len(image)
     width = len(image[0])
-    new_image = [[0.0] * width for _ in range(height)] # Create an empty summed area table
+    new_image = [[0.0] * width for _ in range(height)] 
     for row in range(0, height):
         for col in range(0, width):
             if (row > 0) and (col > 0):
@@ -47,10 +64,9 @@ def compute_summed_area_table(image):
 **F(A2) Integral image: CF12 - Generalized Sugeno**
 ```Python
 def compute_summed_area_table_F1F2(image ):
-    # image is a 2-dimensional array containing ints or floats, with at least 1 element.
     height = len(image)
     width = len(image[0])
-    S   = [[0.0] * width for _ in range(height)] # Create an empty summed area table
+    S   = [[0.0] * width for _ in range(height)] 
     S_c = S# Create an empty summed area table
     for row in range(0, height):
         for col in range(0, width):
@@ -79,10 +95,9 @@ def compute_summed_area_table_F1F2(image ):
 
 ```Python
 def compute_summed_area_table_CHO(image ):
-    # image is a 2-dimensional array containing ints or floats, with at least 1 element.
     height = len(image)
     width = len(image[0])
-    S   = [[0.0] * width for _ in range(height)] # Create an empty summed area table
+    S   = [[0.0] * width for _ in range(height)] 
     S_c = S# Create an empty summed area table
     for row in range(0, height):
         for col in range(0, width):
@@ -111,10 +126,9 @@ def compute_summed_area_table_CHO(image ):
 **F(A3) Integral image: Hamacher t-norm Integral Image**
 ```Python
 def compute_summed_area_table_HAM(image ):
-    # image is a 2-dimensional array containing ints or floats, with at least 1 element.
     height = len(image)
     width = len(image[0])
-    S   = [[0.0] * width for _ in range(height)] # Create an empty summed area table
+    S   = [[0.0] * width for _ in range(height)]
     S_c = S# Create an empty summed area table
     for row in range(0, height):
         for col in range(0, width):
@@ -153,8 +167,6 @@ def adaptive_thresh_fuzzy_int(input_img, int_img, a1=4, a2=1, T=0, log=False):
     h, w = input_img.shape
     S = w/a1
     s2 = S/a2
-
-
     for col in range(w):
         for row in range(h):
             y0 = int(max(row-s2, 0))
@@ -182,17 +194,6 @@ def adaptive_thresh_fuzzy_int(input_img, int_img, a1=4, a2=1, T=0, log=False):
 
     return out_img, mat, T
 ```
-
-
-
-
-**Visual Examples**
-Here a simple visual test on the [theta-dataset](/theta-dataset) for our 3 methods **A2,A3,A4** with respect 4 traditional binarization methods (note Global Th is the Otsu method):
-![alt text](/res0.png)
-
-Instead here, the CNN binary predictions of the images above for 2 CNNs: [Le-Net5](/CNN-Binarization) and [RED-Net](https://github.com/ajgallego/document-image-binarization).
-
-![letnetrednet](/lenetrednet.png)
 
 
 
