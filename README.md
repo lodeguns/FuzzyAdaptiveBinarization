@@ -25,12 +25,12 @@ Here a simple visual test on the [theta-dataset](/theta-dataset) for our 3 metho
 
 Instead here, the CNN binary predictions of the images above for 2 CNNs: [Le-Net5](/CNN-Binarization) and [RED-Net](https://github.com/ajgallego/document-image-binarization).
 
-![letnetrednet](/lenetrednet.png)
+![letnetrednet](/lenetrednet.png = 200x100)
 
 
 ### FLAT algortihm (Fuzzy Local Adaptive Thresholding)
 Here a whole overview of the FLAT algorithm. More details in the paper. 
-![alt text](/image1git.png = 250x120)
+![alt text](/image1git.png)
 
 
 
