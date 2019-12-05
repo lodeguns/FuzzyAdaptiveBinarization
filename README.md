@@ -32,7 +32,7 @@ Instead here, the CNN binary predictions of the images above for 2 CNNs: [Le-Net
  
  
  
-### FLAT algortihm (Fuzzy Local Adaptive Thresholding)
+## FLAT algortihm (Fuzzy Local Adaptive Thresholding)
 
 Here a whole overview of the FLAT algorithm. More details in the paper. 
 
