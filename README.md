@@ -206,14 +206,15 @@ def adaptive_thresh_fuzzy_int(input_img, int_img, a1=4, a2=1, T=0, log=False):
 **Source code**: 
 The extened tests and implementations are provided in a single python scritpt, [here](/fuzzy_adaptive_bin.py).
 
-**The theta-dataset and gamma-dataset with**:
-The respective datasets are: [theta-dataset](theta-dataset) and [gamma-dataset](gamma-dataset).
-The gamma-dataset is our challenging dataset, while the theta-dataset is provided by an external source, please refeer to the citations in the paper.  
-
 **Sensitivity and Robustness analysis table for FLAT**: are provided in this [file](sensitivity_robustness)
 
 **Time benchmark on Google Colab**: The JIT optimized implementations of the CF12 - FLAT (the best performing one in terms of SSIM, MSE, Precision and Recall) and the associated benchmarks are analyzed on Google Colab and they are provided in the following link: [link](https://colab.research.google.com/drive/1bdL0tHnW213_AZUHoYX2vq1PhEC75kCA
 ).
+
+
+## Gamma and theta-dataset
+The respective datasets are: [theta-dataset](theta-dataset) and [gamma-dataset](gamma-dataset).
+The gamma-dataset is our challenging dataset, while the theta-dataset is provided by an external source, please refeer to the citations in the paper.  
 
  
 
