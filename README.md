@@ -19,6 +19,7 @@ This document presents a new adaptive binarization technique based on fuzzy inte
 **Visual Examples**
 
 Here a simple visual test on the [theta-dataset](/theta-dataset) for our 3 methods **A2,A3,A4** with respect 4 traditional binarization methods (note Global Th is the Otsu method):
+
 ![alt text](/res0.png)
 
 Instead here, the CNN binary predictions of the images above for 2 CNNs: [Le-Net5](/CNN-Binarization) and [RED-Net](https://github.com/ajgallego/document-image-binarization).
@@ -32,7 +33,9 @@ Instead here, the CNN binary predictions of the images above for 2 CNNs: [Le-Net
  
  
 ### FLAT algortihm (Fuzzy Local Adaptive Thresholding)
+
 Here a whole overview of the FLAT algorithm. More details in the paper. 
+
 ![alt text](/image1git.png)
 
 Here, for the impatient, is an implementation of the FLAT methods in [a Python script](/fuzzy_adaptive_bin.py).
@@ -62,6 +65,7 @@ def compute_summed_area_table(image):
 ``` 
 
 **F(A2) Integral image: CF12 - Generalized Sugeno**
+
 ```Python
 def compute_summed_area_table_F1F2(image ):
     height = len(image)
@@ -124,6 +128,7 @@ def compute_summed_area_table_CHO(image ):
 ``` 
 
 **F(A3) Integral image: Hamacher t-norm Integral Image**
+
 ```Python
 def compute_summed_area_table_HAM(image ):
     height = len(image)
