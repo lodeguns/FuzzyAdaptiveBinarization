@@ -15,7 +15,7 @@ This document presents a new adaptive binarization technique based on fuzzy inte
  
  
 **Table S-1**
-![alt text](/Table S1.png)
+![alt text](/Table%20S1.png)
 
 **Visual Examples**
 
