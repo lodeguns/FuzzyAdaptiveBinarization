@@ -18,18 +18,10 @@ This document presents a new adaptive binarization technique based on fuzzy inte
 
 **Visual Examples**
 
-Here a simple visual test on the [theta-dataset](/theta-dataset) for our 3 methods **A2,A3,A4** with respect 4 traditional binarization methods (note Global Th is the Otsu method):
+Here, additional visual examples on the [theta-dataset](/theta-dataset) for our 3 methods **A2,A3,A4** with respect 4 traditional binarization methods (note Global Th is the Otsu method):
 
 ![alt text](/res0.png)
 
-Instead here, the CNN binary predictions of the images above for 2 CNNs: [Le-Net5](/CNN-Binarization) and [RED-Net](https://github.com/ajgallego/document-image-binarization).
-
-![letnetrednet](/lenetrednet.png)
-
-The CNNs for binarization are linked in this repository. Le-Net5 implementation is provided [here](/CNN-Binarization), while the [RED-Net](https://github.com/ajgallego/document-image-binarization) is linked to the authors GitHub. For what is concerning RED-Net(U-net), in this paperwork, their pre-trained model is used for comparisons.
-
- 
- 
  
  
 ## FLAT algortihm (Fuzzy Local Adaptive Thresholding)
