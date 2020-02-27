@@ -206,8 +206,8 @@ def adaptive_thresh_fuzzy_int(input_img, int_img, a1=4, a2=1, T=0, log=False):
 
 
 
-## Gamma and theta-dataset
-The respective datasets are: [theta-dataset](theta-dataset) and [gamma-dataset](gamma-dataset).
+## Toy dataset, Test datased and an additional theta-dataset for thresholding
+The respective datasets are: [gamma-dataset](Toy Dataset),  [theta-dataset](theta-dataset) and .
 The gamma-dataset is our challenging dataset, while the theta-dataset is provided by an external source, please refeer to the citations in the paper.  
 
  
