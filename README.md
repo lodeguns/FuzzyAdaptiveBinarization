@@ -14,8 +14,13 @@ Adaptive binarization methodologies thredhold the intensity of the pixels with r
 This document presents a new adaptive binarization technique based on fuzzy integral images through an efficient design of a modified SAT for fuzzy integrals. We define this new methodology as FLAT (Fuzzy Local Adaptive Thresholding). The experimental results show that the proposed methodology have produced an image quality thresholding often better than other traditional or simple neural network models. We propose a new generalization of the Sugeno and CF12 integrals to improve the existing results and how they can be efficiently computed in the Integral Image. Therefore, these new generalized fuzzy integrals can be used as a tool for grayscale processing in real-time and deep-learning applications.			
  
 ## Supplmentary Materials
-**Table S-1**
+**Table S-1** : 
 In the [Table S-1](/adaptive_bin_supp.pdf) a comparison between our algorithms and the Bradley algorithm on the toy-dataset is provided. The values of perturbations of each Image are indicated with respective values, as it is described in the paper. 
+
+**Sensitivity and Robustness analysis table for FLAT**: are provided in this [file](sensitivity_robustness)
+
+**Time benchmark on Google Colab**: The JIT optimized implementations of the CF12 - FLAT (the best performing one in terms of SSIM, MSE, Precision and Recall) and the associated benchmarks are analyzed on Google Colab and they are provided in the following link: [link](https://colab.research.google.com/drive/1bdL0tHnW213_AZUHoYX2vq1PhEC75kCA
+).
 
  
  
@@ -29,10 +34,6 @@ Here a whole overview of the FLAT algorithm. More details in the paper.
 **Source code**: 
 The extened tests and implementations are provided in a single Python 3.6.8 script, [here](/fuzzy_adaptive_bin.py).
 
-**Sensitivity and Robustness analysis table for FLAT**: are provided in this [file](sensitivity_robustness)
-
-**Time benchmark on Google Colab**: The JIT optimized implementations of the CF12 - FLAT (the best performing one in terms of SSIM, MSE, Precision and Recall) and the associated benchmarks are analyzed on Google Colab and they are provided in the following link: [link](https://colab.research.google.com/drive/1bdL0tHnW213_AZUHoYX2vq1PhEC75kCA
-).
 
 Here, for the impatient, is an implementation of the FLAT methods used [here](/fuzzy_adaptive_bin.py).
 
