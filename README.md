@@ -15,7 +15,7 @@ This document presents a new adaptive binarization technique based on fuzzy inte
  
  
 **Table S-1**
-![alt text](/Table%20S1.png)
+In the [Table S-1](/theta-dataset) a comparison between our algorithms and the Bradley algorithm on the toy-dataset is provided.
 
 **Visual Examples**
 
