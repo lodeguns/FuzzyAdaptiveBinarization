@@ -15,7 +15,7 @@ This document presents a new adaptive binarization technique based on fuzzy inte
  
 ## Supplmentary Materials
 **Table S-1**
-In the [Table S-1](/adaptive_bin_supp.pdf) a comparison between our algorithms and the Bradley algorithm on the toy-dataset is provided.
+In the [Table S-1](/adaptive_bin_supp.pdf) a comparison between our algorithms and the Bradley algorithm on the toy-dataset is provided. The values of perturbations of each Image are indicated with respective values, as it is described in the paper. 
 
  
  
