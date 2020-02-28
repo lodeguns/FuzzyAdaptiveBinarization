@@ -17,12 +17,6 @@ This document presents a new adaptive binarization technique based on fuzzy inte
 **Table S-1**
 In the [Table S-1](/theta-dataset) a comparison between our algorithms and the Bradley algorithm on the toy-dataset is provided.
 
-**Visual Examples**
-
-Here, additional visual examples on the [theta-dataset](/theta-dataset) for our 3 methods **A2,A3,A4** with respect 4 traditional binarization methods (note Global Th is the Otsu method):
-
-![alt text](/res0.png)
-
  
  
 ## FLAT algortihm (Fuzzy Local Adaptive Thresholding)
@@ -208,8 +202,15 @@ def adaptive_thresh_fuzzy_int(input_img, int_img, a1=4, a2=1, T=0, log=False):
 
 
 ## Toy dataset, Test datased and an additional theta-dataset for thresholding
-The respective datasets are: [gamma-dataset](gamma-dataset),  [theta-dataset](theta-dataset) and .
-The gamma-dataset is our challenging dataset, while the theta-dataset is provided by an external source, please refeer to the citations in the paper.  
+The respective datasets are: [toy dataset](gamma-dataset),  [test dataset](test-dataset).
+The gamma dataset is our challenging dataset, while the test dataset is provided by an external source, please refeer to the citations in the paper.  
+
+
+**Visual Examples**
+
+Here, an additional visual examples on another dataset with GT (we call [theta-dataset](/theta-dataset)) for our 3 methods **A2,A3,A4** with respect 4 traditional binarization methods (note Global Th is the Otsu method) is provided:
+
+![alt text](/res0.png)
 
  
 
