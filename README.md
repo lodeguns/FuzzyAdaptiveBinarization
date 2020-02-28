@@ -13,9 +13,9 @@ Adaptive binarization methodologies thredhold the intensity of the pixels with r
 **Results and Conclusions:**   
 This document presents a new adaptive binarization technique based on fuzzy integral images through an efficient design of a modified SAT for fuzzy integrals. We define this new methodology as FLAT (Fuzzy Local Adaptive Thresholding). The experimental results show that the proposed methodology have produced an image quality thresholding often better than other traditional or simple neural network models. We propose a new generalization of the Sugeno and CF12 integrals to improve the existing results and how they can be efficiently computed in the Integral Image. Therefore, these new generalized fuzzy integrals can be used as a tool for grayscale processing in real-time and deep-learning applications.			
  
- 
+## Supplmentary Materials
 **Table S-1**
-In the [Table S-1](/theta-dataset) a comparison between our algorithms and the Bradley algorithm on the toy-dataset is provided.
+In the [Table S-1](/adaptive_bin_supp.pdf) a comparison between our algorithms and the Bradley algorithm on the toy-dataset is provided.
 
  
  
