@@ -1,7 +1,8 @@
 ## Adaptive binarization based on fuzzy integrals
 This repository contains the manuscript mentioned in the title, and associated code and data sets used for testing our novel methodology. Should you need help running our code, please contact us.
 
-https://link
+NOTE: "Adaptive binarization based on fuzzy integrals" has been successfully submitted and is presently being given full consideration for publication in the IEEE Transactions on Image Processing as Journal Paper.
+
 
 ### Citation
 
@@ -223,5 +224,5 @@ This work is supported by the Artificial Intelligence departement of the Univers
 
 
 
-** .BIB **
+** .BIB ** as soon as possible.
 
