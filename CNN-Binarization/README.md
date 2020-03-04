@@ -1,2 +1,2 @@
-
+These two models are no longer accounted in the final version of the paper. The implementations remains included in the repository just for knowledge. 
 The CNNs for binarization are linked in this repository. [Le-Net5](/CNN-Binarization) implementation is provided in the .tar.gz, while the [RED-Net](https://github.com/ajgallego/document-image-binarization) is linked to the authors GitHub. For what is concerning RED-Net(U-net), in this paperwork, their pre-trained model is used for comparisons.
