@@ -12,14 +12,8 @@ Bardozzo, Francesco, et al. "Adaptive binarization based on fuzzy integrals." ar
   year={2020}
 }
 
-
-NOTE: "Adaptive binarization based on fuzzy integrals" has been successfully submitted and is presently being given full consideration for publication in the IEEE Transactions on Image Processing as Journal Paper.
-
 ### Abstract
-**Background:**  	 
-Adaptive binarization methodologies threshold the intensity of the pixels with respect to adjacent pixels exploiting the integral images. In turn, the integral images are generally computed optimally using the summed-area-table algorithm (SAT).                                 
-**Results and Conclusions:**   
-This document presents a new adaptive binarization technique based on fuzzy integral images through an efficient design of a modified SAT for fuzzy integrals. We define this new methodology as FLAT (Fuzzy Local Adaptive Thresholding). The experimental results show that the proposed methodology have produced an image quality thresholding often better than other traditional or simple neural network models. We propose a new generalization of the Sugeno and CF12 integrals to improve the existing results and how they can be efficiently computed in the Integral Image. Therefore, these new generalized fuzzy integrals can be used as a tool for grayscale processing in real-time and deep-learning applications.			
+Adaptive binarization methodologies threshold the intensity of the pixels with respect to adjacent pixels exploiting the integral images. In turn, the integral images are generally computed optimally by using the summed-area-table algorithm (SAT). This document presents a new adaptive binarization technique based on fuzzy integral images through an efficient design of a modified SAT for fuzzy integrals. We define this new methodology as FLAT (Fuzzy Local Adaptive Thresholding). Experimental results show that the proposed methodology produced a better image quality thresholding than well-known global and local algorithms based on thresholds.  We proposed new generalizations of different fuzzy integrals to improve existing results and reaching an accuracy 0.94 on an an extended dataset. Moreover,  due to the high performances, these new generalized fuzzy integrals created ah hoc for adaptive binarization, can be used as tools for grayscale processing and more complex real-time applications. 	
  
 ## Supplmentary Materials
 **Table S-1** : 
