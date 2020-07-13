@@ -219,7 +219,7 @@ Here, an additional visual examples on another dataset with GT (we call [theta-d
  
 
 **Licence**
-The same of IEEE transactions for Journal Papers.
+The same of Information Fusion Journal
 
 This work is supported by the Artificial Intelligence departement of the University of Navarra - UPNA (SP) and by the DISA-MIS department, NeuRoNe Lab (University of Salerno - IT).
 
