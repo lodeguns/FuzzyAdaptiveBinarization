@@ -1,4 +1,4 @@
-## Sugeno integral generalization applied to improveadaptive image binarization
+## Sugeno integral generalization applied to improve adaptive image binarization
 This repository contains the manuscript mentioned in the title, and associated code and data sets used for testing our novel methodology. Should you need help running our code, please contact us.
 
 ### Preprint Citation
