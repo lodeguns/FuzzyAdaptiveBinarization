@@ -37,10 +37,9 @@ Here a whole overview of the FLAT algorithm. More details in the paper.
 The extened tests and implementations are provided in a single Python 3.6.8 script, [here](/fuzzy_adaptive_bin.py).
 
 
-Here, for the impatient, is an implementation of the FLAT methods used [here](/fuzzy_adaptive_bin.py).
+**Thresholding algorithms based on integral images with Sugeno generalizations and Bradley**
 
-**Thresholding algorithms based on integral images with Sugeno generalizations and Bradley **
-**CLASS implementation optimized with Numba**
+**(Python Class implementation optimized with Numba)**
 
 ```Python
 import warnings
