@@ -1,10 +1,9 @@
 ## Sugeno integral generalization applied to improve adaptive image binarization
 This repository contains the manuscript mentioned in the title, and associated code and data sets used for testing our novel methodology. Should you need help running our code, please contact us.
 
-### Cite these papers:
 ### Paper Citation
 
-Bardozzo, Francesco, et al. "Sugeno integral generalization applied to improve adaptive image binarization." Information Fusition - Elsevier (2020).
+**Bardozzo, Francesco, et al. "Sugeno integral generalization applied to improve adaptive image binarization." Information Fusition - Elsevier (2020).**
 
 @article{bardozzo2020sugeno,
   title={Sugeno integral generalization applied to improve adaptive image binarization},
@@ -14,8 +13,7 @@ Bardozzo, Francesco, et al. "Sugeno integral generalization applied to improve a
   year={2020}
 }
 
-
-### Preprint Citation
+**Preprint Citation**
 Bardozzo, Francesco, et al. "Adaptive binarization based on fuzzy integrals." arXiv preprint arXiv:2003.08755 (2020).
 
 @article{bardozzo2020adaptive,
@@ -25,8 +23,7 @@ Bardozzo, Francesco, et al. "Adaptive binarization based on fuzzy integrals." ar
   year={2020}
 }
 
-Note: In the preprint version, there are further comparisons with convolutional neural networks suitable for thresholding.
-
+Note: In the preprint, there are further comparisons with convolutional neural networks suitable for thresholding.
 
 ### Abstract
 Classic adaptive binarization methodologies threshold pixels intensity with re-spect  to  adjacent  pixels  exploiting  integral  images.   In  turn,  integral  imagesare  generally  computed  optimally  by  using  the  summed-area-table  algorithm(SAT).  This  document  presents  a  new  adaptive  binarization  technique  basedon  fuzzy  integral  images.   Which,  in  turn,  this  technique  is  supported  by  anefficient design of a modified SAT for generalized Sugeno fuzzy integrals.  Wedefine this methodology as FLAT (Fuzzy Local Adaptive Thresholding).  Exper-imental results show that the proposed methodology produced a better imagequality thresholding than well-known global and local thresholding algorithms.We proposed new generalizations of different fuzzy integrals to improve existingresults and reaching an accuracy≈0.94 on a wide dataset.  Moreover, due tohigh performances, these new generalized Sugeno fuzzy integrals created ad hocfor adaptive binarization, can be used as tools for grayscale processing and morecomplex real-time thresholding applications.
@@ -49,9 +46,23 @@ Here a whole overview of the FLAT algorithm. More details in the paper.
 ![alt text](/image1git.png)
 
 
-**Source code**: 
-The extened tests and implementations are provided in a single Python 3.6.8 script, [here](/fuzzy_adaptive_bin.py).
+## Toy dataset, Test dataset and an additional theta-dataset for thresholding
+The respective datasets are: [toy dataset](gamma-dataset),  [test dataset 280](https://drive.google.com/drive/folders/11lIv91rRgYFbADVPptOsLnEu2zJDCCnJ?usp=sharing) of 280 images for testing our algorithms at the optimum, and [test_dataset 2413](https://drive.google.com/open?id=15OezFUWvfXpYI3Tx8gqneC8_ETND8CdJ) for testing our and other thresholding algorithms with a bigger benchmark (2413 images).
 
+The toy dataset is our challenging dataset with controlled perturbations, while the 2 test datasets are provided by an [external source](https://github.com/Andrew-Qibin/DSS), please refeer to citations in the paper for more details. 
+
+
+**Visual Examples**
+
+Here, an additional visual examples on another dataset with GT (we call [theta-dataset](/theta-dataset)) for our 3 methods **A2,A3,A4** with respect 4 traditional binarization methods (note Global Th is the Otsu method) is provided:
+
+![alt text](/res0.png)
+
+ 
+
+
+## Source code ## 
+The extened tests and implementations are provided in a single Python 3.6.8 script, [here](/fuzzy_adaptive_bin.py). However, the core of the research is provided here as follows:
 
 **Thresholding algorithms based on integral images with Sugeno generalizations and Bradley**
 
@@ -91,7 +102,7 @@ class fuzzy_sat:
         self.out_img = np.zeros(shape, dtype=float32)
         self.th_mat = np.zeros(shape, dtype=float32)
 
-    def compute_sat(self):
+    def compute_sat(self):                              #Integral image
         for row in range(0, self.height):
             for col in range(0, self.width):
                 if (row > 0) and (col > 0):
@@ -104,7 +115,7 @@ class fuzzy_sat:
                 else:
                     self.S[row][col] = self.image[row][col]
 
-    def compute_sat_cf12(self):
+    def compute_sat_cf12(self):                              #CFval 1,2 integral image
         for row in range(0, self.height):
             for col in range(0, self.width):
                 if (row > 0) and (col > 0):
@@ -129,7 +140,7 @@ class fuzzy_sat:
                     self.S[row][col] = self.image[row][col]
                     self.S_c[row][col] = self.image[row][col]
 
-    def compute_sat_cho(self):
+    def compute_sat_cho(self):                            #Choquet integral image
         for row in range(0, self.height):
             for col in range(0, self.width):
                 if (row > 0) and (col > 0):
@@ -155,7 +166,7 @@ class fuzzy_sat:
                     self.S[row][col] = self.image[row][col]
                     self.S_c[row][col] = self.S[row][col]
 
-    def compute_sat_ham(self):
+    def compute_sat_ham(self):                  #Hamacher integral image
         for row in range(0, self.height):
             for col in range(0, self.width):
                 if (row > 0) and (col > 0):
@@ -184,7 +195,7 @@ class fuzzy_sat:
                     self.S[row][col] = self.image[row][col]
                     self.S_c[row][col] = self.S[row][col]
 
-    def adaptive_thresh_bradley(self, a1, T):
+    def adaptive_thresh_bradley(self, a1, T):                    #adaptive thresholding
         w_n = min(self.height, self.width) / a1
         for col in range(self.width):
             for row in range(self.height):
@@ -204,7 +215,7 @@ class fuzzy_sat:
                 else:
                     self.out_img[row, col] = 1
 
-    def adaptive_thresh_fuzzy(self, a1, T):
+    def adaptive_thresh_fuzzy(self, a1, T):                     #fuzzy adaptive thresholding
         w_n = min(self.height, self.width) / a1
         for col in range(self.width):
             for row in range(self.height):
@@ -237,7 +248,7 @@ class fuzzy_sat:
 
 ```
 
-Class usage:
+**Class usage:**
 
 ```
 int_img = fuzzy_sat(np.asarray(test_image))
@@ -413,26 +424,11 @@ def adaptive_thresh_fuzzy_int(input_img, int_img, a1=4, a2=1, T=0, log=False):
 
 
 
-## Toy dataset, Test dataset and an additional theta-dataset for thresholding
-The respective datasets are: [toy dataset](gamma-dataset),  [test dataset 280](https://drive.google.com/drive/folders/11lIv91rRgYFbADVPptOsLnEu2zJDCCnJ?usp=sharing) of 280 images for testing our algorithms at the optimum, and [test_dataset 2413](https://drive.google.com/open?id=15OezFUWvfXpYI3Tx8gqneC8_ETND8CdJ) for testing our and other thresholding algorithms with a bigger benchmark (2413 images).
 
-The toy dataset is our challenging dataset with controlled perturbations, while the 2 test datasets are provided by an [external source](https://github.com/Andrew-Qibin/DSS), please refeer to citations in the paper for more details. 
-
-
-**Visual Examples**
-
-Here, an additional visual examples on another dataset with GT (we call [theta-dataset](/theta-dataset)) for our 3 methods **A2,A3,A4** with respect 4 traditional binarization methods (note Global Th is the Otsu method) is provided:
-
-![alt text](/res0.png)
-
- 
 
 **Licence**
 The same of Information Fusion Journal
 
 This work is supported by the Artificial Intelligence departement of the University of Navarra - UPNA (SP) and by the DISA-MIS department, NeuRoNe Lab (University of Salerno - IT).
 
-
-
-** .BIB ** as soon as possible.
 
