@@ -1,16 +1,32 @@
 ## Sugeno integral generalization applied to improve adaptive image binarization
 This repository contains the manuscript mentioned in the title, and associated code and data sets used for testing our novel methodology. Should you need help running our code, please contact us.
 
-### Preprint Citation
+### Cite these papers:
+### Paper Citation
 
+Bardozzo, Francesco, et al. "Sugeno integral generalization applied to improve adaptive image binarization." Information Fusition - Elsevier (2020).
+
+@article{bardozzo2020sugeno,
+  title={Sugeno integral generalization applied to improve adaptive image binarization},
+  author={Bardozzo, Francesco and De La Osa, Borja and Horanska, Lubomira and Fumanal-Idocin, Javier and Troiano, Luigi and Tagliaferri, Roberto and Fernandez, Javier and Bustince, Humberto},
+  journal={Information Fusion - Elsevier},
+  doi={https://doi.org/10.1016/j.inffus.2020.10.020}
+  year={2020}
+}
+
+
+### Preprint Citation
 Bardozzo, Francesco, et al. "Adaptive binarization based on fuzzy integrals." arXiv preprint arXiv:2003.08755 (2020).
 
 @article{bardozzo2020adaptive,
   title={Adaptive binarization based on fuzzy integrals},
-  author={Bardozzo, Francesco and De La Osa, Borja and Horanska, Lubomira and Fumanal-Idocin, Javier and Troiano, Luigi and Tagliaferri, Roberto and Fernandez, Javier and Bustince, Humberto and others},
+  author={Bardozzo, Francesco and De La Osa, Borja and Horanska, Lubomira and Fumanal-Idocin, Javier and Troiano, Luigi and Tagliaferri, Roberto and Fernandez, Javier and Bustince, Humberto},
   journal={arXiv preprint arXiv:2003.08755},
   year={2020}
 }
+
+Note: In the preprint version, there are further comparisons with convolutional neural networks suitable for thresholding.
+
 
 ### Abstract
 Classic adaptive binarization methodologies threshold pixels intensity with re-spect  to  adjacent  pixels  exploiting  integral  images.   In  turn,  integral  imagesare  generally  computed  optimally  by  using  the  summed-area-table  algorithm(SAT).  This  document  presents  a  new  adaptive  binarization  technique  basedon  fuzzy  integral  images.   Which,  in  turn,  this  technique  is  supported  by  anefficient design of a modified SAT for generalized Sugeno fuzzy integrals.  Wedefine this methodology as FLAT (Fuzzy Local Adaptive Thresholding).  Exper-imental results show that the proposed methodology produced a better imagequality thresholding than well-known global and local thresholding algorithms.We proposed new generalizations of different fuzzy integrals to improve existingresults and reaching an accuracy≈0.94 on a wide dataset.  Moreover, due tohigh performances, these new generalized Sugeno fuzzy integrals created ad hocfor adaptive binarization, can be used as tools for grayscale processing and morecomplex real-time thresholding applications.
