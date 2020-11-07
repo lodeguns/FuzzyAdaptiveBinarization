@@ -3,7 +3,7 @@ This repository contains the manuscript mentioned in the title, and associated c
 
 ### Paper Citation
 
-**Bardozzo, Francesco, et al. "Sugeno integral generalization applied to improve adaptive image binarization." Information Fusition - Elsevier (2020).**
+**Bardozzo, Francesco, et al. "Sugeno integral generalization applied to improve adaptive image binarization." Information Fusion - Elsevier (2020).**
 
 @article{bardozzo2020sugeno,
   title={Sugeno integral generalization applied to improve adaptive image binarization},
