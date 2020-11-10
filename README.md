@@ -34,10 +34,11 @@ Here, an additional visual examples on another dataset with GT (we call [theta-d
 
 ![alt text](/res0.png)
 
- 
 
+---
 
-## Source code ## 
+## Source code 
+
 The extened tests and implementations are provided in a single Python 3.6.8 script, [here](/fuzzy_adaptive_bin.py). However, the core of the research is provided here as follows:
 
 **Thresholding algorithms based on integral images with Sugeno generalizations and Bradley**
@@ -234,6 +235,7 @@ out_img = int_img.get_FTh()
 ```
 
 
+---
 
 
 **S integral image : Classic summed-area table algorithm (SAT)**
@@ -398,8 +400,9 @@ def adaptive_thresh_fuzzy_int(input_img, int_img, a1=4, a2=1, T=0, log=False):
 
 
 
+---
 
-**Preprint Citation**
+**Journal Citation**
 
 Bardozzo, Francesco, et al. "Sugeno integral generalization applied to improve adaptive image binarization." Information Fusion - Elsevier (2020).
 
@@ -414,6 +417,7 @@ Bardozzo, Francesco, et al. "Sugeno integral generalization applied to improve a
 ---
 
 **Preprint Citation**
+
 Bardozzo, Francesco, et al. "Adaptive binarization based on fuzzy integrals." arXiv preprint arXiv:2003.08755 (2020).
 
 @article{bardozzo2020adaptive,
