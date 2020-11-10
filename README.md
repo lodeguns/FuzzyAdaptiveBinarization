@@ -7,10 +7,10 @@ This repository contains the manuscript mentioned in the title, and associated c
 
 @article{bardozzo2020sugeno,
   title={Sugeno integral generalization applied to improve adaptive image binarization},
-  author={Bardozzo, Francesco and De La Osa, Borja and Horanska, Lubomira and Fumanal-Idocin, Javier and Troiano, Luigi and Tagliaferri, Roberto and Fernandez, Javier and Bustince, Humberto},
-  journal={Information Fusion - Elsevier},
-  doi={https://doi.org/10.1016/j.inffus.2020.10.020}
-  year={2020}
+  author={Bardozzo, Francesco and De La Osa, Borja and Horansk{\'a}, L'ubom{\'\i}ra and Fumanal-Idocin, Javier and delli Priscoli, Mattia and Troiano, Luigi and Tagliaferri, Roberto and Fernandez, Javier and Bustince, Humberto},
+  journal={Information Fusion},
+  year={2020},
+  publisher={Elsevier}
 }
 
 **Preprint Citation**
