@@ -430,6 +430,8 @@ Bardozzo, Francesco, et al. "Adaptive binarization based on fuzzy integrals." ar
 Note: In the preprint, there are further comparisons with convolutional neural networks suitable for thresholding.
 
 
+---
+
 
 **Licence**
 The same of Information Fusion Journal - Elsevier
