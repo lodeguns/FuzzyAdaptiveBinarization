@@ -406,6 +406,7 @@ def adaptive_thresh_fuzzy_int(input_img, int_img, a1=4, a2=1, T=0, log=False):
 
 Bardozzo, Francesco, et al. "Sugeno integral generalization applied to improve adaptive image binarization." Information Fusion - Elsevier (2020).
 
+```
 @article{bardozzo2020sugeno,
   title={Sugeno integral generalization applied to improve adaptive image binarization},
   author={Bardozzo, Francesco and De La Osa, Borja and Horansk{\'a}, L'ubom{\'\i}ra and Fumanal-Idocin, Javier and delli Priscoli, Mattia and Troiano, Luigi and Tagliaferri, Roberto and Fernandez, Javier and Bustince, Humberto},
@@ -414,12 +415,14 @@ Bardozzo, Francesco, et al. "Sugeno integral generalization applied to improve a
   publisher={Elsevier}
 }
 
+```
 ---
 
 **Preprint Citation**
 
 Bardozzo, Francesco, et al. "Adaptive binarization based on fuzzy integrals." arXiv preprint arXiv:2003.08755 (2020).
 
+```
 @article{bardozzo2020adaptive,
   title={Adaptive binarization based on fuzzy integrals},
   author={Bardozzo, Francesco and De La Osa, Borja and Horanska, Lubomira and Fumanal-Idocin, Javier and Troiano, Luigi and Tagliaferri, Roberto and Fernandez, Javier and Bustince, Humberto},
@@ -427,6 +430,7 @@ Bardozzo, Francesco, et al. "Adaptive binarization based on fuzzy integrals." ar
   year={2020}
 }
 
+```
 Note: In the preprint, there are further comparisons with convolutional neural networks suitable for thresholding.
 
 
