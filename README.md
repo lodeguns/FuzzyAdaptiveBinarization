@@ -24,21 +24,20 @@ Bardozzo, Francesco, et al. "Sugeno integral generalization applied to improve a
 
 ```
 ---
-
-**Preprint Citation**
-
-Bardozzo, Francesco, et al. "Adaptive binarization based on fuzzy integrals." arXiv preprint arXiv:2003.08755 (2020).
+Some slight advances in this conference paper:
+**Conference Citation **
+ 
+Fumanal-Idocin, Javier, et al. "Gated Local Adaptive Binarization using Supervised Learning."  WILF 2021: International Workshop on Fuzzy Logic and Applications.
 
 ```
-@article{bardozzo2020adaptive,
-  title={Adaptive binarization based on fuzzy integrals},
-  author={Bardozzo, Francesco and De La Osa, Borja and Horanska, Lubomira and Fumanal-Idocin, Javier and Troiano, Luigi and Tagliaferri, Roberto and Fernandez, Javier and Bustince, Humberto},
-  journal={arXiv preprint arXiv:2003.08755},
-  year={2020}
+@inproceedings{fumanal2021gated,
+  title={Gated Local Adaptive Binarization using Supervised Learning},
+  author={Fumanal-Idocin, Javier and Uriarte, Juan and de la Osa, Borja and Bardozzo, Francesco and Fern{\'a}ndez, Javier and Bustince, Humberto},
+  booktitle={WILF 2021: International Workshop on Fuzzy Logic and Applications},
+  year={2021},
+  organization={WILF}
 }
-
 ```
-Note: In the preprint, there are further comparisons with convolutional neural networks suitable for thresholding.
 
 
 ---
