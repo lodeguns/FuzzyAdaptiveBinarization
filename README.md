@@ -25,7 +25,8 @@ Bardozzo, Francesco, et al. "Sugeno integral generalization applied to improve a
 ```
 ---
 Some slight advances in this conference paper:
-**Conference Citation **
+
+**Conference Citation**
  
 Fumanal-Idocin, Javier, et al. "Gated Local Adaptive Binarization using Supervised Learning."  WILF 2021: International Workshop on Fuzzy Logic and Applications.
 
