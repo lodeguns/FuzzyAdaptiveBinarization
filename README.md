@@ -24,7 +24,6 @@ Bardozzo, Francesco, et al. "Sugeno integral generalization applied to improve a
 
 ```
 ---
-Some slight advances in this conference paper:
 
 **Conference Citation**
  
