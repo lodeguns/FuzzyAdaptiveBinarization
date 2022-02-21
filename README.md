@@ -13,6 +13,8 @@ Classic adaptive binarization methodologies threshold pixels intensity with re-s
 
 Bardozzo, Francesco, et al. "Sugeno integral generalization applied to improve adaptive image binarization." Information Fusion - Elsevier (2020).
 
+[read here](https://www.sciencedirect.com/science/article/pii/S1566253520304012)
+
 ```
 @article{bardozzo2020sugeno,
   title={Sugeno integral generalization applied to improve adaptive image binarization},
@@ -27,7 +29,9 @@ Bardozzo, Francesco, et al. "Sugeno integral generalization applied to improve a
 
 **Conference Citation**
  
-Fumanal-Idocin, Javier, et al. "Gated Local Adaptive Binarization using Supervised Learning."  WILF 2021: International Workshop on Fuzzy Logic and Applications.
+Fumanal-Idocin, Javier, et al. "Gated Local Adaptive Binarization using Supervised Learning."  WILF 2021: International Workshop on Fuzzy Logic and Applications. (2021)
+
+[read here](http://ceur-ws.org/Vol-3074/paper16.pdf)
 
 ```
 @inproceedings{fumanal2021gated,
