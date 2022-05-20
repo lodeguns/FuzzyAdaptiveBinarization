@@ -86,7 +86,7 @@ The extened tests and implementations are provided in a single Python 3.6.8 scri
 
 **Thresholding algorithms based on integral images with Sugeno generalizations and Bradley**
 
-**(Python Class implementation optimized with Numba)**
+**(Python Class implementation GPU optimized with Numba)**
 
 ```Python
 import warnings
